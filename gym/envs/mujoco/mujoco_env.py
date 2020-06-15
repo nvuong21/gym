@@ -58,13 +58,13 @@ class MujocoEnv(gym.Env):
         self.init_qpos = self.sim.data.qpos.ravel().copy()
         self.init_qvel = self.sim.data.qvel.ravel().copy()
 
-        self._set_action_space()
-
-        action = self.action_space.sample()
-        observation, _reward, done, _info = self.step(action)
-        assert not done
-
-        self._set_observation_space(observation)
+        # self._set_action_space()
+        #
+        # action = self.action_space.sample()
+        # observation, _reward, done, _info = self.step(action)
+        # assert not done
+        #
+        # self._set_observation_space(observation)
 
         self.seed()
 
